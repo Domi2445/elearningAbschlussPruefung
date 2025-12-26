@@ -215,7 +215,7 @@ function displayDetailedFeedback() {
         
         const title = document.createElement('div');
         title.className = 'question-feedback-title';
-        title.textContent = `Frage ${index + 1}: ${answer.correct ? '✓ Richtig' : '✗ Falsch'} (${answer.points}/${question.points} Punkte)`;
+        title.textContent = `Frage ${answer.questionIndex + 1}: ${answer.correct ? '✓ Richtig' : '✗ Falsch'} (${answer.points}/${question.points} Punkte)`;
         
         const text = document.createElement('div');
         text.className = 'question-feedback-text';
