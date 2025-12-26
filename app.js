@@ -255,7 +255,7 @@ function generateAIFeedback() {
         feedback += '</ul>';
         
         // Find topics that need improvement
-        const incorrectTopics = userAnswers.filter(a => !a.correct).map((a, i) => `Frage ${i + 1}`);
+        const incorrectTopics = userAnswers.filter(a => !a.correct).map(a => `Frage ${a.questionIndex + 1}`);
         if (incorrectTopics.length > 0) {
             feedback += '<p><strong>Verbesserungspotential:</strong></p><ul>';
             feedback += `<li>Überprüfen Sie noch einmal: ${incorrectTopics.join(', ')}</li>`;
