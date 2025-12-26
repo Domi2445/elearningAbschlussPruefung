@@ -230,7 +230,6 @@ function displayDetailedFeedback() {
 function generateAIFeedback() {
     const aiFeedbackContainer = document.getElementById('aiFeedback');
     const correctAnswers = userAnswers.filter(a => a.correct).length;
-    const totalQuestions = quizData.length;
     const percentage = (quizScore / 100) * 100;
     
     let feedback = '';
@@ -293,6 +292,7 @@ function generateAIFeedback() {
         feedback += '</div>';
     }
     
+    // Safe to use innerHTML here as all content is internally generated with no user input
     aiFeedbackContainer.innerHTML = feedback;
 }
 
